@@ -1,0 +1,3 @@
+<view class="container">
+  <button bindtap="playmusic">{{musicflag?'播放':'暂停'}}</button>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/list/list.wxml-->
+<!--列表渲染 -->
+<!-- View 盒子容器  text 文本标签 -->
+<view wx:for="{{list}}" wx:key="*this">
+<!--针对循环自动每一项自动赋值叫做item 可以通过wx:for-item='a'改变item-->
+  {{item}}
+</view>
+<!--显示隐藏-->
+<text>
+{{msg}}
+</text>
+<text hidden="{{flag}}">
+  显示hidden内容{{msg}}
+</text>
+<text wx:if="{{flag}}">
+  显示内容{{msg}}
+</text>
+<text>
+  {{flag?'显示true':'显示fasle'}}
+</text>
