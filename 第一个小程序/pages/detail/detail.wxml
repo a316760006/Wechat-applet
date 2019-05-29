@@ -1,0 +1,7 @@
+<!--通过import引入模板-->
+<import src="../tmpl/tmpl.wxml"/>
+<view class="">
+<!--is对应的是你定义的模板的name -->
+<template is="list-item"></template>
+		
+</view>

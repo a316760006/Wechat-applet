@@ -156,3 +156,67 @@ for (let i = 0; i <= 10; i++) {
     }, 1000)
   }(i))
 }
+
+
+// js运行三步骤   1.语法分析  2.预编译  3.解释执行
+/*  全局预编译:
+    GO-->window
+    var function
+*/
+console.log(a)
+var a = 10;
+function a() { }
+go = {
+  a: 10,
+  a: function () { }
+}
+var obj = {
+  name: 'li',
+  name: 'wang'
+}
+/*函数预编译 : 
+  1.创建AO对象  
+  2.找形参和变量声明,将变量和形参作为AO对象的属性名,值undefined   
+  3.实参形参相统一
+  4.找函数生命.值赋予函数体
+*/
+function num(a, b) {
+  console.log(a)            // function a
+  var a = 123;
+  console.log(a)            // 123
+  function a() { }
+  console.log(a)            // 123
+  var b = function () { }
+  console.log(b)            // function b
+  var c = function () { }
+}
+
+function a() {
+  function b() {
+    var bbb = 234;
+    console.log(aaa)
+  }
+  var aaa = 123;
+  return b
+}
+var g = 100;
+var d = a();
+d()
+
+
+// Go = {
+//   g: undefined,
+//   a: function. 
+// }
+// aAo = {
+//   aaa: undefined,
+//   b: function
+// }
+/*
+  全
+  scope 为函数作用域(包含自己至父级顶端作用域-->GO)[]
+      执行期上下文的集合  成链式链接   我们俗称作用域 []
+    a函数  定义  scope -> [GO]
+    a      执行        ->[aAO,GO]
+    b      定义        ->[aAO,GO]
+*/

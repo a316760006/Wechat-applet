@@ -1,0 +1,8 @@
+.animatebox{
+  position: relative;
+  top: 30rpx;
+  left: 60rpx;
+  width:200rpx;
+  height:200rpx;
+  background: #f00;
+}

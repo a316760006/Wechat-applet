@@ -1,0 +1,9 @@
+/* pages/artlist/artlist.wxss */
+.star{
+  width: 50rpx;
+  height: 54rpx;
+}
+.star1{
+  width: 50rpx;
+  height: 58rpx;
+}

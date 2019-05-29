@@ -1,11 +1,14 @@
 {
   "pages": [
+    "pages/artlist/artlist",
+    "pages/animate/animate",
+    "pages/list/list",
     "pages/index/index",
     "pages/ajaxdom/ajaxdom",
     "pages/event/event",
     "pages/backuautio/backuautio",
-    "pages/list/list",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/detail"
   ],
   "requiredBackgroundModes": [
     "audio"
