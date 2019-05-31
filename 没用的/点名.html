@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box {
+            width: 600px;
+            height: 250px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        #btn {
+            width: 100px;
+            height: 30px;
+        }
+
+        #box>div {
+            width: 100px;
+            height: 30px;
+            float: left;
+            margin: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .white {
+            background: whitesmoke;
+        }
+
+        #inp {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>随机点名系统</h1>
+    <div class="box" id="box"></div>
+    <div id="inp">
+        <input type="button" id="btn" value="开始" />
+    </div>
+    <script type="text/javascript">
+        //名字
+        // var arrs = ['张建家','陈雪柳','杨金宁','马翊天','范康文','梁琦','范涛凡','程冬雪','奚昕','舒浩奇','李超辉','朱姝玉','高明月','周扬','冯凯','邢象洁','李锡','王尧','张旭','马世雷'];
+        var arrs = ['程冬雪', '李超辉', '朱姝玉', '杨金宁', '马翊天', '张建家'];
+        var Box = document.getElementById('box');
+        //动态创建标签
+        for (let i in arrs) {
+            let Div = document.createElement('div');
+            Div.className = 'white';
+            Div.innerHTML = arrs[i];
+            Box.appendChild(Div);
+        }
+        //定时器
+        let btn = document.getElementById('btn');
+        btn.onclick = function () {
+            if (this.value === '开始') {
+                timer = setInterval(function () {
+                    var num = parseInt(Math.random() * arrs.length);
+                    for (let i in arrs) {
+                        Box.children[i].className = 'white';
+                    }
+                    Box.children[num].className = 'red';
+                }, 10);
+                this.value = '停止'
+            } else {
+                clearInterval(timer);
+                this.value = '开始'
+            }
+        }
+    </script>
+</body>
+
+</html>

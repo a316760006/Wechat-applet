@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/note/note",
+    "pages/add/add",
     "pages/artlist/artlist",
     "pages/animate/animate",
     "pages/list/list",
